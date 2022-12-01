@@ -1,0 +1,14 @@
+.hero {
+    height: 70vh;
+    background-color: #f9f3f0;
+    padding: 90px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 550px;
+
+    img {
+        width: 348px;
+        margin: 100px auto;
+    }
+}
