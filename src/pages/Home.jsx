@@ -1,5 +1,6 @@
 import './Home.scss'
 import product from '../assets/product-38.png'
+import Products from './Products'
 
 const Home = () => {
   return (
@@ -17,7 +18,9 @@ const Home = () => {
                 <p className="card-text"><small>Last updated 3 mins ago</small></p>
             </div>
         </div>
+        
     </div>
+
     
   )
 }
