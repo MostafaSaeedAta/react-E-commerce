@@ -49,16 +49,21 @@ const Loading = () => {
     </>
   )
 }
+console.log(data);
 
+const filterProduct = (cat) => {
+  const updatedList = data.filter((x)=>x.category === cat.toLowerCase());
+  setFilter(updatedList);
+}
 const ShowProducts = () => {
   return(
     <>
       <div className="buttons w-100 d-flex justify-content-center my-4">
-          <button className="btn btn-outline-dark mx-2"> All </button>
-          <button className="btn btn-outline-dark mx-2"> Men's clothing </button>
-          <button className="btn btn-outline-dark mx-2"> jewelery </button>
-          <button className="btn btn-outline-dark mx-2"> electronics </button>
-          <button className="btn btn-outline-dark mx-2"> Women's clothing </button>
+          <button className="btn btn-outline-dark mx-2" onClick={() =>setFilter(data)}> All </button>
+          <button className="btn btn-outline-dark mx-2" onClick={() =>filterProduct("Men's clothing")}> Men's clothing </button>
+          <button className="btn btn-outline-dark mx-2" onClick={() =>filterProduct('Jewelery')}> jewelery </button>
+          <button className="btn btn-outline-dark mx-2" onClick={() =>filterProduct('Electronics')}> electronics </button>
+          <button className="btn btn-outline-dark mx-2" onClick={() =>filterProduct("Women's clothing")}> Women's clothing </button>
         </div>
         {filter.map((Products) => {
           return (
