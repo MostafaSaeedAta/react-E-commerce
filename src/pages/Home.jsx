@@ -4,6 +4,8 @@ import Products from './Products'
 
 const Home = () => {
   return (
+    <>
+
     <div className='hero'>
         <div className="d-flex align-items-center justify-content-center">
             <img src={product} className="card-img" alt="..."/>
@@ -18,10 +20,11 @@ const Home = () => {
                 <p className="card-text"><small>Last updated 3 mins ago</small></p>
             </div>
         </div>
-        
     </div>
+        <Products/>
 
     
+    </>
   )
 }
 

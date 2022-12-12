@@ -19,7 +19,6 @@ useEffect(() => {
       setData(await response.clone().json()); 
       setFilter(await response.json());
       setLoading(false);
-      console.log(filter)
     }
 
     return () => {
@@ -49,7 +48,6 @@ const Loading = () => {
     </>
   )
 }
-console.log(data);
 
 const filterProduct = (cat) => {
   const updatedList = data.filter((x)=>x.category === cat.toLowerCase());
@@ -67,7 +65,7 @@ const ShowProducts = () => {
         </div>
         {filter.map((Products) => {
           return (
-            <>
+            <div key={Products.id}>
             <div className="col-md-3 mb-2">
                 <div className="card" style={{width: "18rem"}}>
                   <img src={Products.image} className="card-img-top" alt="..."/>
@@ -80,7 +78,7 @@ const ShowProducts = () => {
                 </div>
             </div>
                 
-            </>
+            </div>
           )
         })}
     </>
